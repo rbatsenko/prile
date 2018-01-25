@@ -10,8 +10,12 @@ $(document).ready( function() {
         $('#intro .bg-add').css('background-position','-10%' + '-' + scrollTop/6 + 'px');
     })
     $('body').fadeIn(200);
+    function newpage() {
+        window.location = newLocation;
+    }
     $("a").click(function(event){
         event.preventDefault();
-        $("body").fadeOut(200);      
+        newLocation = this.href;
+        $("body").fadeOut(200, newpage);    
     });
 });
