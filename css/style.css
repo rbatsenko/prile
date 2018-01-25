@@ -3,7 +3,14 @@ html, body, * {
 }
 
 section {
-    overflow: hidden;
+    overflow: visible;
+}
+
+p {
+    color: #808080;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 24px;
 }
 
 .navbar {
@@ -11,21 +18,145 @@ section {
     padding: 25px 0;
 }
 
-.nav-link {
+.navbar-toggleable-md .navbar-nav .nav-link {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
+    color: rgba(255,255,255,1);
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-color .2s;
+    -moz-transition: border-color .2s;
+    -o-transition: border-color .2s;
+    transition: border-color .2s;
 }
 
-#section-one {
+.navbar-nav .nav-link:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+#intro {
+    position: relative;
     background-image: url(/img/header-bg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
+    min-height: 710px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
+#intro:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/skos.png);
+    background-repeat: repeat;
+    background-position: -10% 0%;
+    z-index: 100;
+}
 
+.container {
+    z-index: 120;
+}
+
+#intro .heading .h1-heading {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.btn-learn-more {
+    margin-right: 20px;
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 20px 40px;
+    border: 2px solid #ffffff;
+    width: 200px;
+}
+
+.btn-transparent {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+.btn-transparent:hover {
+    color: #085977;
+    background-color: #ffffff;
+}
+
+.btn-white {
+    color: #085977;
+    background-color: #ffffff;
+}
+
+.btn-white:hover {
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#how-it-works {
+    position: relative;
+    margin-bottom: 50rem;
+}
+
+.h2-heading {
+    font-size: 40px;
+    font-weight: 300;
+    color: #095573;
+    margin-bottom: 70px;
+}
+
+.bg-before-white {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 100;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    overflow: hidden;
+}
+
+.bg-before-img {
+    position: absolute;
+    top: -26%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-image: url(/img/abstract1.png);
+    background-repeat: no-repeat;
+    background-position: -3% 56%;
+    z-index: 100;
+    transform: skewY(5deg);
+    transform-origin: top left;
+}
+
+.box {
+    height: 300px;
+}
 
 /*----Additional media query----*/
 
