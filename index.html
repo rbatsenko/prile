@@ -18,16 +18,22 @@
     <!-- Fonts -->
     <link href="css/fonts.css" rel="stylesheet">
 
+    <!-- Icons -->
+    <link href="css/open-iconic-bootstrap.min.css" rel="stylesheet">
+
     <!-- Main styles -->
     <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
-    <nav class="navbar navbar-toggleable-md fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
         <a class="navbar-brand" href="/"><img src="img/logo.png" alt="Logo"></a>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="/">How it works</a>
@@ -75,10 +81,10 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-7 d-flex flex-row justify-content-start align-items-end">
-            <img class="how-img" src="/img/how-img.png" alt="How it works">
+          <div class="col-12 col-md-6 col-lg-7 d-flex flex-row justify-content-start align-items-center align-items-xl-end">
+            <img class="how-img img-fluid" src="/img/how-img.png" alt="How it works">
           </div>
-          <div class="col-12 col-md-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="heading">
               <h2 class="h2-heading">
                 How it works ___
@@ -128,7 +134,7 @@
       <div class="bg-before-img"></div>
       <div class="container">
         <div class="row">
-          <div class="col-12 col-md-4 offset-md-1">
+          <div class="col-12 col-md-6 col-lg-4 offset-lg-1 order-2 order-md-1">
             <div class="heading">
               <h2 class="h2-heading">
                 Content creators ___
@@ -141,8 +147,8 @@
               <a class="btn btn-transparent btn-blue btn-learn-how" href="/" role="button">Learn how</a>
             </div>
           </div>
-          <div class="col-12 col-md-7 d-flex flex-row justify-content-end align-items-end">
-            <img class="how-img" src="/img/content-creators-img.png" alt="Content creators">
+          <div class="col-12 col-md-6 col-lg-7 d-flex flex-row justify-content-end align-items-center align-items-xl-end order-1 order-md-2">
+            <img class="how-img img-fluid" src="/img/content-creators-img.png" alt="Content creators">
           </div>
         </div>
       </div>

@@ -20,13 +20,13 @@ p {
 .navbar {
     background-color: rgba(7, 51, 74, .2);
     padding: 25px 0;
-    -webkit-transition: background-color .2s;
-    -moz-transition: background-color .2s;
-    -o-transition: background-color .2s;
-    transition: background-color .2s;
+    -webkit-transition: background-color .3s linear;
+    -moz-transition: background-color .3s linear;
+    -o-transition: background-color .3s linear;
+    transition: background-color .3s linear;
 }
 
-.navbar-toggleable-md .navbar-nav .nav-link {
+.navbar-expand-lg .navbar-nav .nav-link {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -45,6 +45,12 @@ p {
 .navbar-nav .nav-link:hover {
     color: #ffffff;
     border-bottom: 2px solid #ffffff;
+}
+
+.navbar-toggler {
+    padding: 0 .75rem;
+    color: #ffffff;
+    outline: none !important;
 }
 
 #intro {
@@ -73,6 +79,7 @@ p {
 }
 
 .container {
+    position: relative;
     z-index: 120;
 }
 
@@ -252,5 +259,19 @@ p {
     .container {
         width: 1200px;
         max-width: 100%;
+    }
+}
+
+/*----Main media query----*/
+
+@media (max-width: 991.98px) {
+    #navbarNav {
+        margin-top: 2rem;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        display: inline-block;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
