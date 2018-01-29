@@ -264,7 +264,7 @@ p {
 
 /*----Main media query----*/
 
-@media (max-width: 991.98px) {
+@media (max-width: 991.97px) {
     #navbarNav {
         margin-top: 2rem;
     }
