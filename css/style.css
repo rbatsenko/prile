@@ -253,6 +253,30 @@ p {
     background-color: #095a79;
 }
 
+#for-platforms {
+    position: relative;
+    padding: 9rem 0;
+}
+
+#for-platforms .heading .content-text {
+    padding-right: 20%;
+}
+
+#for-platforms .btn-learn-how {
+    margin-top: 20px;
+}
+
+#why-us {
+    position: relative;
+    padding: 9rem 0;
+    background-color: #00516c;
+}
+
+#why-us .h2-heading,
+#why-us .content-text p {
+    color: #ffffff;
+}
+
 /*----Additional media query----*/
 
 @media (min-width: 1280px) {

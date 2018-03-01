@@ -34,13 +34,17 @@ $('nav a').click( function(event) {
 })
 
 function scrollHow() {
-    $("html, body").animate({ scrollTop: $('#how-it-works').offset().top - 120 }, 1000);
+    $("html, body").animate({ scrollTop: $('#how-it-works').offset().top - 150 }, 1000);
 }
 
 function scrollCreators() {
-    $("html, body").animate({ scrollTop: $('#content-creators').offset().top - 120 }, 1000);
+    $("html, body").animate({ scrollTop: $('#content-creators').offset().top - 100 }, 1000);
 }
 
 function scrollPlatforms() {
-    $("html, body").animate({ scrollTop: $('#for-platforms').offset().top - 120 }, 1000);
+    $("html, body").animate({ scrollTop: $('#for-platforms').offset().top - 100 }, 1000);
+}
+
+function scrollWhy() {
+    $("html, body").animate({ scrollTop: $('#why-us').offset().top - 100 }, 1000);
 }
