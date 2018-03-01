@@ -40,3 +40,7 @@ function scrollHow() {
 function scrollCreators() {
     $("html, body").animate({ scrollTop: $('#content-creators').offset().top - 120 }, 1000);
 }
+
+function scrollPlatforms() {
+    $("html, body").animate({ scrollTop: $('#for-platforms').offset().top - 120 }, 1000);
+}
