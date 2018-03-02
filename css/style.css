@@ -208,7 +208,8 @@ p {
 
 #content-creators {
     position: relative;
-    padding: 9rem 0;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
 }
 
 #content-creators .bg-grey-before {
@@ -255,7 +256,8 @@ p {
 
 #for-platforms {
     position: relative;
-    padding: 12rem 0 5rem;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
 }
 
 #for-platforms .heading .content-text {
@@ -281,13 +283,55 @@ p {
 
 #why-us {
     position: relative;
-    padding: 17rem 0;
+    padding-top: 17rem;
+    padding-bottom: 7rem;
     background-color: #00516c;
 }
 
 #why-us .h2-heading,
 #why-us .content-text p {
     color: #ffffff;
+}
+
+#why-us .heading .content-text {
+    padding-right: 75px;
+}
+
+#why-us .center-col .row {
+    flex: 1;
+}
+
+#why-us .center-col .row:first-child .why-us-box {
+    margin-right: 20%;
+}
+
+.why-us-box .h4-heading {
+    margin-top: 25px;
+    color: #ffffff;
+}
+
+#why-us .right-col .content-text {
+    margin-left: 30px;
+    padding-right: 20px;
+}
+
+#why-us .right-col .first-col {
+    padding-left: 30px;
+    border-left: 2px solid #ffffff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+#why-us .right-col .first-col p {
+    margin-bottom: 0;
+}
+
+#footer {
+    position: relative;
+    background-color: #06212b;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
 }
 
 /*----Additional media query----*/

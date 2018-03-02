@@ -50,9 +50,9 @@ function scrollWhy() {
     $("html, body").animate({ scrollTop: $('#why-us').offset().top - 100 }, 1000);
 }*/
 
-$("nav a[href^='/#']").click(function(e) {
+$("nav a[href^='#']").click(function(e) {
     e.preventDefault();
-    var position = $($(this).attr("href")).offset().top;
+    var position = $($(this).attr("href")).offset().top - 100;
     $("body, html").animate({
         scrollTop: position
     }, 1000 );
