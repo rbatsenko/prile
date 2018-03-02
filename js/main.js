@@ -29,6 +29,7 @@ $('a:not(#navbarNav a)').click(function(event) {
     $("body").fadeOut(400, newpage);    
 });
 
+/*
 $('nav a').click( function(event) {
     event.preventDefault();
 })
@@ -47,4 +48,12 @@ function scrollPlatforms() {
 
 function scrollWhy() {
     $("html, body").animate({ scrollTop: $('#why-us').offset().top - 100 }, 1000);
-}
+}*/
+
+$("nav a[href^='/#']").click(function(e) {
+    e.preventDefault();
+    var position = $($(this).attr("href")).offset().top;
+    $("body, html").animate({
+        scrollTop: position
+    }, 1000 );
+});
