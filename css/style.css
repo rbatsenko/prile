@@ -284,7 +284,7 @@ p {
 #why-us {
     position: relative;
     padding-top: 17rem;
-    padding-bottom: 7rem;
+    padding-bottom: 2rem;
     background-color: #00516c;
 }
 
@@ -310,9 +310,14 @@ p {
     color: #ffffff;
 }
 
+#why-us .right-col .row {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
 #why-us .right-col .content-text {
     margin-left: 30px;
-    padding-right: 20px;
+    padding-right: 40px;
 }
 
 #why-us .right-col .first-col {
@@ -325,6 +330,23 @@ p {
 
 #why-us .right-col .first-col p {
     margin-bottom: 0;
+}
+
+#why-us .right-col .content-text p {
+    font-size: 16px;
+}
+
+#why-us .bg-after {
+    position: absolute;
+    bottom: -11%;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: #00516b;
+    z-index: 119;
+    transform: skewY(-3deg);
+    transform-origin: top left;
+    overflow: hidden;
 }
 
 #footer {
