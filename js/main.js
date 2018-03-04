@@ -1,12 +1,12 @@
 $("body").niceScroll({
-    cursorwidth:"10px",
+    cursorwidth: "10px",
     cursorborder: "0px solid #fff",
     zindex: [200],
     smoothscroll: true,
     scrollspeed: 80,
     mousescrollstep: 20
 });
-$(document).on( 'scroll', function() {
+$(document).on('scroll', function () {
     scrollTop = $(window).scrollTop();
     height = $(window).height();
     $('#intro').css('background-position','50%' + '-' + scrollTop/1.5 + 'px');
