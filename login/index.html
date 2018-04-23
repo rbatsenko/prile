@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="Prile Admin Panel" />
+		<meta name="keywords" content="Login, Unify Login, Admin, Dashboard, Bootstrap4, Sass, CSS3, HTML5, Responsive Dashboard, Responsive Admin Template, Admin Template, Best Admin Template, Bootstrap Template, Themeforest" />
+		<meta name="author" content="Prile" />
+		<link rel="shortcut icon" href="/img/favicon.png" />
+		<title>Prile Admin Dashboard - Login</title>
+		
+		<!-- Common CSS -->
+		<link rel="stylesheet" href="/dashboard/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/dashboard/fonts/icomoon/icomoon.css" />
+
+		<!-- Mian and Login css -->
+		<link rel="stylesheet" href="/dashboard/css/main.css" />
+
+	</head>  
+
+	<body class="login-bg">
+			
+		<div class="container">
+			<div class="login-screen row align-items-center">
+				<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+					<form action="" autocomplete="on">
+						<div class="login-container">
+							<div class="row no-gutters">
+								<div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+									<div class="login-box">
+										<div class="login-error" style="color: #f75e6c;"></div>
+										<a href="/login/" class="login-logo">
+											<img src="/dashboard/img/login-logo.png" alt="Prile Admin Dashboard" />
+										</a>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="icon-account_circle"></i></span>
+											<input type="text" id="email" class="form-control" placeholder="Email" aria-label="email" aria-describedby="email">
+										</div>
+										<br>
+										<div class="input-group">
+											<span class="input-group-addon"><i class="icon-verified_user"></i></span>
+											<input type="password" id="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password">
+										</div>
+										<div class="actions clearfix">
+											<a href="/dashboard/forgot-pwd.html">Lost password?</a>
+											<button id="submit" type="submit" class="btn btn-primary button--submit">Login</button>
+										</div>
+										<div class="or"></div>
+										<div class="mt-4">
+											<a href="/dashboard/signup.html" class="additional-link">Don't have an Account? <span>Create Now</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+									<div class="login-slider"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="main-footer no-bdr fixed-btm">
+			<div class="container">
+				Copyright Prile Admin 2018.
+			</div>
+		</footer>
+
+		<script src="/dashboard/js/jquery.js"></script>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		
+		<script>
+
+			$( document ).ready( function() {
+				const error = localStorage.getItem('error');
+				if ( error ) {
+					$('.input-group-addon').css({
+						'background': '#f75e6c',
+						'color': '#ffffff'
+					});
+					$('.login-error').text(error);
+				}
+			});
+
+			let user = {
+				email: '',
+				password: ''
+			}
+
+			$('#submit').on( 'click', function(e) {
+				e.preventDefault();
+
+				user.email = $('#email').val();
+				user.password = $('#password').val();
+
+				axios.post('http://www.prile.io/api/session', {
+					email: user.email,
+					password: user.password
+				},
+				{
+					headers: { 'Content-Type': 'application/json' }
+				})
+				.then(function (response) {
+					console.log(response.data.status);
+					if (response.data.status == 'OK') {
+						localStorage.setItem('email', user.email);
+						localStorage.setItem('password', user.password);
+						localStorage.removeItem('error');
+						$('.input-group-addon').css({
+							'background': '#f5f6fa',
+							'color': '#aab3c3'
+						});
+						$('.login-error').text('');
+						window.location.href = 'http://localhost:8080';
+					} else {
+						localStorage.setItem('error', 'Please try another credentials!');
+						const error = localStorage.getItem('error');
+						if ( error ) {
+							$('.input-group-addon').css({
+								'background': '#f75e6c',
+								'color': '#ffffff'
+							});
+							$('.login-error').text(error);
+						}
+					}
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+			})
+		
+		</script>
+
+	</body>
+</html>

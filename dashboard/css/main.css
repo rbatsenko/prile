@@ -193,7 +193,7 @@ hr {
 
 /************* Text Colors **************/
 .text-primary {
-  color: #70d2f6 !important; }
+  color: #0079e1 !important; }
 
 .text-secondary {
   color: #ff3e61 !important; }
@@ -340,7 +340,7 @@ hr {
   position: relative;
   margin-bottom: auto;
   padding: 1.5rem;
-  min-height: 1250px;
+  min-height: auto;
   background: #f5f6fa; }
 
 .main-footer {
@@ -2296,7 +2296,7 @@ a.blog-sm {
   .login-screen .login-logo {
     margin: 20px 0 20px 0;
     text-align: left;
-    display: block; }
+    display: inline-block; }
     .login-screen .login-logo > img {
       margin: 0;
       max-height: 36px; }
@@ -2345,7 +2345,7 @@ a.blog-sm {
     color: #aab3c3; }
 
 .login-slider {
-  background: url("../img/login-slider.jpg") center center no-repeat;
+  background: url("../img/login-slider.jpg") left center no-repeat;
   background-size: cover;
   height: 100%;
   position: relative; }
@@ -3892,3 +3892,22 @@ label {
 .no-gutters > [class*="col-"] {
   padding-right: 0px;
   padding-left: 0px; }
+
+
+/****************** MY STYLES *************************/
+
+.right-actions .btn {
+  background-color: #007ae1;
+  border: none;
+  padding: .5rem 1rem;
+}
+
+.right-actions .btn span {
+  text-transform: uppercase;
+  font-size: .9rem;
+  margin: 0 2rem;
+}
+
+.input-group-addon {
+  transition: all .2s ease-in-out;
+}
